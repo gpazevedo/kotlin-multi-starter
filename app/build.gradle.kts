@@ -5,6 +5,7 @@ plugins {
 
     // Apply the Application plugin to add support for building an executable JVM application.
     application
+    jacoco
 }
 
 dependencies {
