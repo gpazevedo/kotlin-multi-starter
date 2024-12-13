@@ -6,6 +6,20 @@ plugins {
     // Apply the Application plugin to add support for building an executable JVM application.
     application
     jacoco
+    `maven-publish`
+}
+
+group = "com.symprise.multi"
+version = "1.0-SNAPSHOT"
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "$group"
+            artifactId = "app"
+            from(components["java"])
+        }
+    }
 }
 
 dependencies {
